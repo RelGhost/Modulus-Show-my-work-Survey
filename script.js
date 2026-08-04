@@ -1,5 +1,5 @@
 // REPLACE THIS WITH YOUR PUBLISHED GOOGLE APPS SCRIPT WEB APP URL
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzN1ys1A6m6C-Z-FQ6YrH4Q3-wkNxqK2txuzniN8spSLu8XeiG3YEipfDf86IkfgNhe/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaCSbYuBOPwbs12NyLF5rI1HwbWjgOd0yRITANFN05PoScfQ7Qn-6PekLDgEIasbok/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('surveyForm');
