@@ -37,16 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
     data.majorHeadache = formData.get('majorHeadache');
 
     try {
-      // Send data as text/plain to avoid CORS preflight constraints in Google Apps Script
+      // Send data bypassing CORS preflight constraints
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors', // <-- This is the magic line that fixes the block
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(data)
       });
       
-      // Show success
+      // Because 'no-cors' obscures the response, we assume success if the network request doesn't fail
       successOverlay.style.display = 'flex';
       form.reset();
     } catch (error) {
