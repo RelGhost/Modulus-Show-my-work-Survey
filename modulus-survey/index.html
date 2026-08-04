@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulus Technologies - Field Operations Survey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Modulus Technologies</h1>
+      <p>Field Operations Workflow Survey</p>
+    </div>
+
+    <div class="card">
+      <form id="surveyForm">
+        
+        <!-- 1. Primary Role -->
+        <div class="form-group">
+          <label class="question" for="primaryRole">1. Primary Role <span class="required">*</span></label>
+          <select id="primaryRole" name="primaryRole" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Field Technician">Field Technician</option>
+            <option value="Team Leader">Team Leader</option>
+            <option value="Admin/Management">Admin/Management</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <!-- 2. Main daily responsibilities -->
+        <div class="form-group">
+          <label class="question" for="dailyResponsibilities">2. Main daily responsibilities <span class="required">*</span></label>
+          <textarea id="dailyResponsibilities" name="dailyResponsibilities" placeholder="Describe your main tasks on a typical day..." required></textarea>
+        </div>
+
+        <!-- 3. How you receive tasks -->
+        <div class="form-group">
+          <label class="question">3. How do you usually receive tasks? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="receiveTasks" value="WhatsApp"> WhatsApp</label>
+            <label class="checkbox-label"><input type="checkbox" name="receiveTasks" value="Phone/SMS"> Phone/SMS</label>
+            <label class="checkbox-label"><input type="checkbox" name="receiveTasks" value="Email"> Email</label>
+            <label class="checkbox-label"><input type="checkbox" name="receiveTasks" value="Verbal"> Verbal</label>
+            <label class="checkbox-label"><input type="checkbox" name="receiveTasks" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <!-- 4. Step-by-step process -->
+        <div class="form-group">
+          <label class="question" for="stepByStepProcess">4. Step-by-step process from arriving at a site to leaving</label>
+          <textarea id="stepByStepProcess" name="stepByStepProcess" placeholder="Outline your steps from arrival to departure..."></textarea>
+        </div>
+
+        <!-- 5. How you report task completion -->
+        <div class="form-group">
+          <label class="question" for="reportCompletion">5. How do you report task completion?</label>
+          <textarea id="reportCompletion" name="reportCompletion" placeholder="Who do you notify and how?"></textarea>
+        </div>
+
+        <!-- 6. Challenges with site photos/measurements -->
+        <div class="form-group">
+          <label class="question">6. Challenges with site photos/measurements</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="challengesPhotos" value="Poor network"> Poor network</label>
+            <label class="checkbox-label"><input type="checkbox" name="challengesPhotos" value="Forgetting photos"> Forgetting photos</label>
+            <label class="checkbox-label"><input type="checkbox" name="challengesPhotos" value="Lost in chats"> Lost in chats</label>
+            <label class="checkbox-label"><input type="checkbox" name="challengesPhotos" value="Manual typing"> Manual typing</label>
+            <label class="checkbox-label"><input type="checkbox" name="challengesPhotos" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <!-- 7. Average number of photos -->
+        <div class="form-group">
+          <label class="question" for="averagePhotos">7. Average number of photos submitted per visit</label>
+          <input type="number" id="averagePhotos" name="averagePhotos" min="0" placeholder="e.g. 15">
+        </div>
+
+        <!-- 8. Safety/PPE protocols -->
+        <div class="form-group">
+          <label class="question" for="safetyProtocols">8. Safety/PPE protocols manually logged</label>
+          <textarea id="safetyProtocols" name="safetyProtocols" placeholder="How do you currently log safety checks and PPE?"></textarea>
+        </div>
+
+        <!-- 9. Process for client approval/sign-off -->
+        <div class="form-group">
+          <label class="question" for="clientApproval">9. Process for client approval/sign-off</label>
+          <textarea id="clientApproval" name="clientApproval" placeholder="Describe the sign-off process..."></textarea>
+        </div>
+
+        <!-- 10. How you log tools/consumables -->
+        <div class="form-group">
+          <label class="question" for="logTools">10. How you log tools/consumables taken to site</label>
+          <textarea id="logTools" name="logTools" placeholder="Current inventory or tool tracking method..."></textarea>
+        </div>
+
+        <!-- 11. Handling requests for emergency fuel/parts -->
+        <div class="form-group">
+          <label class="question" for="emergencyRequests">11. Handling requests for emergency fuel/parts</label>
+          <textarea id="emergencyRequests" name="emergencyRequests" placeholder="What happens when you need urgent supplies?"></textarea>
+        </div>
+
+        <!-- 12. Frequency of zero/poor internet -->
+        <div class="form-group">
+          <label class="question">12. Frequency of zero/poor internet on-site</label>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="poorInternetFrequency" value="Almost every day" required> Almost every day</label>
+            <label class="radio-label"><input type="radio" name="poorInternetFrequency" value="A few times a week"> A few times a week</label>
+            <label class="radio-label"><input type="radio" name="poorInternetFrequency" value="Rarely"> Rarely</label>
+            <label class="radio-label"><input type="radio" name="poorInternetFrequency" value="Never"> Never</label>
+          </div>
+        </div>
+
+        <!-- 13. Most used external apps -->
+        <div class="form-group">
+          <label class="question">13. Most used external apps on the job</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="externalApps" value="WhatsApp"> WhatsApp</label>
+            <label class="checkbox-label"><input type="checkbox" name="externalApps" value="Dialer/SMS"> Dialer/SMS</label>
+            <label class="checkbox-label"><input type="checkbox" name="externalApps" value="Google Drive"> Google Drive</label>
+            <label class="checkbox-label"><input type="checkbox" name="externalApps" value="Banking Apps"> Banking Apps</label>
+            <label class="checkbox-label"><input type="checkbox" name="externalApps" value="Navigation"> Navigation (Maps/Waze)</label>
+            <label class="checkbox-label"><input type="checkbox" name="externalApps" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <!-- 14. Specific actions for Banking/Payment apps -->
+        <div class="form-group">
+          <label class="question" for="bankingActions">14. Specific actions for Banking/Payment apps on the job</label>
+          <textarea id="bankingActions" name="bankingActions" placeholder="E.g., paying for local site access, emergency transport..."></textarea>
+        </div>
+
+        <!-- 15. Current SOS/urgent assistance protocol -->
+        <div class="form-group">
+          <label class="question" for="sosProtocol">15. Current SOS/urgent assistance protocol</label>
+          <textarea id="sosProtocol" name="sosProtocol" placeholder="What is the process in case of an emergency on site?"></textarea>
+        </div>
+
+        <!-- 16. Top tool integration wishlist -->
+        <div class="form-group">
+          <label class="question" for="toolWishlist">16. Top tool integration wishlist</label>
+          <textarea id="toolWishlist" name="toolWishlist" placeholder="What apps or tools do you wish worked together?"></textarea>
+        </div>
+
+        <!-- 17. One major headache this EWMS app should solve -->
+        <div class="form-group">
+          <label class="question" for="majorHeadache">17. One major headache this EWMS app should solve</label>
+          <textarea id="majorHeadache" name="majorHeadache" placeholder="Your biggest daily frustration..."></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">Submit Survey</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Overlay -->
+  <div id="successOverlay" class="success-overlay">
+    <div class="success-card">
+      <div class="success-icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <h2>Thank You!</h2>
+      <p>Your responses have been successfully submitted. We appreciate your feedback.</p>
+      <button id="closeOverlay">Close & Return</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
